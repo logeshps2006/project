@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Go Guide — your smart, personalized travel companion." />
+  <title>Go Guide | Discover Your Next Journey</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Go Guide home"><span class="brand-mark">G</span><span>go<span class="brand-light">guide</span><small>TRAVEL SMARTER</small></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+    <nav id="mainNav">
+      <a class="active" href="#home">Home</a><a href="#explore">Explore</a><a href="#planner">Trip Planner</a><a href="#how">How it works</a>
+    </nav>
+    <a class="header-cta" href="#planner">Plan a trip <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <div class="eyebrow"><span class="sparkle">✦</span> YOUR PERSONAL TRAVEL COMPANION</div>
+        <h1>Find your next<br><em>somewhere.</em></h1>
+        <p>Discover places you'll love, build a trip that fits your budget, and make every journey feel like yours.</p>
+        <form class="search-panel" id="searchForm">
+          <label><span class="field-icon">⌖</span><span><small>DESTINATION</small><input id="destinationSearch" type="text" placeholder="Where do you want to go?" /></span></label>
+          <label><span class="field-icon">◷</span><span><small>TRIP STYLE</small><select id="styleSearch"><option value="all">Any experience</option><option value="nature">Nature & hills</option><option value="beach">Beach escape</option><option value="culture">Culture & heritage</option><option value="adventure">Adventure</option></select></span></label>
+          <button class="search-btn" type="submit">Explore places <span>→</span></button>
+        </form>
+        <div class="hero-note"><span class="avatar-stack"><i>☺</i><i>✦</i><i>↗</i></span><span><strong>Made for curious travellers</strong><small>Find inspiration for your next escape</small></span></div>
+      </div>
+      <div class="hero-tag"><span>✦</span> Less planning. More exploring.</div>
+    </section>
+
+    <section class="stats-strip">
+      <div><strong>01</strong><span>Tell us what you love</span></div><div><strong>02</strong><span>Get tailored suggestions</span></div><div><strong>03</strong><span>Build your own journey</span></div>
+    </section>
+
+    <section class="section explore-section" id="explore">
+      <div class="section-heading">
+        <div><div class="eyebrow dark">A LITTLE INSPIRATION</div><h2>Places worth <em>the journey.</em></h2><p>Handpicked destinations to help you start dreaming.</p></div>
+        <a href="#planner" class="text-link">Create your itinerary <span>↗</span></a>
+      </div>
+      <div class="filters" role="group" aria-label="Filter destinations">
+        <button class="filter active" data-filter="all">All places</button><button class="filter" data-filter="nature">Nature</button><button class="filter" data-filter="beach">Beaches</button><button class="filter" data-filter="culture">Culture</button><button class="filter" data-filter="adventure">Adventure</button>
+      </div>
+      <div class="destination-grid" id="destinationGrid">
+        <article class="destination-card" data-category="nature" data-name="Ooty" data-budget="6000">
+          <div class="destination-image image-ooty"><span class="image-label">HILL COUNTRY</span><button class="save-place" aria-label="Save Ooty" data-save="Ooty">♡</button></div>
+          <div class="card-body"><div class="card-meta"><span>📍 Tamil Nadu, India</span><span>★ 4.8</span></div><h3>Ooty</h3><p>Misty mornings, tea gardens and winding mountain roads.</p><div class="card-bottom"><span>From <strong>₹6,000</strong> <small>/ person</small></span><button class="add-trip" data-add="Ooty">Add to trip +</button></div></div>
+        </article>
+        <article class="destination-card" data-category="nature" data-name="Kodaikanal" data-budget="5000">
+          <div class="destination-image image-kodai"><span class="image-label">SLOW ESCAPE</span><button class="save-place" aria-label="Save Kodaikanal" data-save="Kodaikanal">♡</button></div>
+          <div class="card-body"><div class="card-meta"><span>📍 Tamil Nadu, India</span><span>★ 4.7</span></div><h3>Kodaikanal</h3><p>Forest trails, a peaceful lake and cool hill-station air.</p><div class="card-bottom"><span>From <strong>₹5,000</strong> <small>/ person</small></span><button class="add-trip" data-add="Kodaikanal">Add to trip +</button></div></div>
+        </article>
+        <article class="destination-card" data-category="beach" data-name="Pondicherry" data-budget="4500">
+          <div class="destination-image image-pondy"><span class="image-label">COASTAL CHARM</span><button class="save-place" aria-label="Save Pondicherry" data-save="Pondicherry">♡</button></div>
+          <div class="card-body"><div class="card-meta"><span>📍 Puducherry, India</span><span>★ 4.6</span></div><h3>Pondicherry</h3><p>Colourful streets, cafés and golden-hour beach walks.</p><div class="card-bottom"><span>From <strong>₹4,500</strong> <small>/ person</small></span><button class="add-trip" data-add="Pondicherry">Add to trip +</button></div></div>
+        </article>
+        <article class="destination-card" data-category="culture" data-name="Madurai" data-budget="3000">
+          <div class="destination-image image-madurai"><span class="image-label">LIVING HERITAGE</span><button class="save-place" aria-label="Save Madurai" data-save="Madurai">♡</button></div>
+          <div class="card-body"><div class="card-meta"><span>📍 Tamil Nadu, India</span><span>★ 4.7</span></div><h3>Madurai</h3><p>Ancient architecture, vibrant markets and local flavours.</p><div class="card-bottom"><span>From <strong>₹3,000</strong> <small>/ person</small></span><button class="add-trip" data-add="Madurai">Add to trip +</button></div></div>
+        </article>
+        <article class="destination-card" data-category="beach" data-name="Goa" data-budget="9000">
+          <div class="destination-image image-goa"><span class="image-label">BEACH DAYS</span><button class="save-place" aria-label="Save Goa" data-save="Goa">♡</button></div>
+          <div class="card-body"><div class="card-meta"><span>📍 Goa, India</span><span>★ 4.8</span></div><h3>Goa</h3><p>Sunset shores, Portuguese-inspired lanes and seafood.</p><div class="card-bottom"><span>From <strong>₹9,000</strong> <small>/ person</small></span><button class="add-trip" data-add="Goa">Add to trip +</button></div></div>
+        </article>
+        <article class="destination-card" data-category="adventure" data-name="Manali" data-budget="11000">
+          <div class="destination-image image-manali"><span class="image-label">MOUNTAIN ADVENTURE</span><button class="save-place" aria-label="Save Manali" data-save="Manali">♡</button></div>
+          <div class="card-body"><div class="card-meta"><span>📍 Himachal Pradesh, India</span><span>★ 4.9</span></div><h3>Manali</h3><p>Snowy peaks, mountain cafés and outdoor adventures.</p><div class="card-bottom"><span>From <strong>₹11,000</strong> <small>/ person</small></span><button class="add-trip" data-add="Manali">Add to trip +</button></div></div>
+        </article>
+      </div>
+      <p class="empty-state" id="emptyState" hidden>No destinations found. Try another search or filter.</p>
+    </section>
+
+    <section class="personalize-section" id="how">
+      <div class="personalize-copy"><div class="eyebrow">TRAVEL THAT GETS YOU</div><h2>Your interests.<br>Your budget.<br><em>Your kind of trip.</em></h2><p>Go Guide brings destination discovery and trip planning together. Choose what you enjoy and find ideas that fit your travel style.</p><a href="#planner" class="light-btn">Build my travel plan <span>→</span></a></div>
+      <div class="personalize-visual">
+        <div class="floating-card top-card"><span class="mini-icon">✦</span><span><strong>Made for you</strong><small>Recommendations based on your interests</small></span><b>✓</b></div>
+        <div class="journey-card"><div class="journey-photo"></div><div class="journey-info"><span class="pill">YOUR NEXT ESCAPE</span><h3>Weekend in the hills</h3><p>Nature · 2 days · Easy pace</p><div class="journey-route"><span>Chennai</span><i></i><span>Ooty</span></div></div></div>
+        <div class="floating-card bottom-card"><span class="weather-icon">☼</span><span><strong>A little less guesswork</strong><small>Compare places before you go</small></span></div>
+      </div>
+    </section>
+
+    <section class="section planner-section" id="planner">
+      <div class="section-heading"><div><div class="eyebrow dark">LET'S MAKE IT HAPPEN</div><h2>Plan a trip, <em>your way.</em></h2><p>Choose a few details and start building your travel shortlist.</p></div></div>
+      <div class="planner-layout">
+        <form class="planner-form" id="plannerForm">
+          <label>Your trip name<input id="tripName" type="text" placeholder="e.g. A weekend in the hills" /></label>
+          <div class="form-row"><label>Travel style<select id="tripStyle"><option value="any">Surprise me</option><option value="nature">Nature & hills</option><option value="beach">Beach escape</option><option value="culture">Culture & heritage</option><option value="adventure">Adventure</option></select></label><label>Budget per person<select id="tripBudget"><option value="5000">Under ₹5,000</option><option value="8000" selected>Under ₹8,000</option><option value="12000">Under ₹12,000</option><option value="20000">Flexible</option></select></label></div>
+          <div class="form-row"><label>Start date<input id="startDate" type="date" /></label><label>Duration<select id="tripDuration"><option>1–2 days</option><option selected>3–4 days</option><option>5–7 days</option><option>1 week or more</option></select></label></div>
+          <button class="primary-btn" type="submit">Find my destinations <span>→</span></button>
+          <p class="form-hint">Demo project: recommendations use sample destination data.</p>
+        </form>
+        <div class="trip-result" id="tripResult">
+          <div class="result-icon">✦</div><span class="eyebrow dark">YOUR TRIP BOARD</span><h3>Your next adventure starts here.</h3><p>Build a shortlist by adding places from Explore, or use the planner to get destination suggestions.</p>
+          <div id="tripItems" class="trip-items"><div class="trip-placeholder">Your selected destinations will appear here.</div></div>
+          <div class="trip-total" id="tripTotal" hidden><span>Estimated starting budget</span><strong id="totalAmount">₹0</strong></div>
+          <button class="outline-btn" id="clearTrip" type="button">Clear trip board</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing-cta"><div><span class="eyebrow">THE WORLD IS WAITING</span><h2>Make room for <em>new stories.</em></h2><p>Start with a place. Let the journey unfold.</p></div><a href="#explore" class="light-btn">Explore destinations <span>→</span></a></section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#home"><span class="brand-mark">G</span><span>go<span class="brand-light">guide</span><small>TRAVEL SMARTER</small></span></a><p>Discover better. Travel smarter. © <span id="year"></span> Go Guide — Student project demo.</p><a href="#home" class="back-top">Back to top ↑</a></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
